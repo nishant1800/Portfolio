@@ -27,8 +27,7 @@ const About = () => {
   ];
 
   const coreTools = [
-    "Python", "SQL", "Pandas", "NumPy", "Power BI", "MySQL",
-    "Java", "JavaScript", "React", "Node.js", "MongoDB", "Git", "GitHub", "Ms-Excel", "Machine Learing", "Deep Learing", "Mathematics", "Antigravity", "Canva"
+    "Python", "SQL", "Pandas", "NumPy", "Power BI", "Java", "JavaScript", "React", "Node.js", "MongoDB", "Git", "GitHub", "Ms-Excel", "Machine Learing", "Deep Learing", "Mathematics", "AWS", "Linux"
   ];
 
   return (
