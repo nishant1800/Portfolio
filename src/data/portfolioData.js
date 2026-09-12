@@ -40,7 +40,7 @@ export const experienceData = [
     id: 1,
     role: "Associate Analyst",
     company: "Redical Minds",
-    period: "Sepember 2025 – June 2026",
+    period: "Novermber 2025 – June 2026",
     location: "Bengaluru, India",
     type: "Full-Time",
     current: false,
