@@ -11,7 +11,7 @@ export const personalInfo = {
     linkedin: "https://linkedin.com/in/nishant1800",
     leetcode: "https://leetcode.com/nishant1800"
   },
-  resumeUrl: "https://drive.google.com/file/d/1YudiFjipp9KtwsYgYtqGMv7WX2hVVg8A/view?usp=drive_link"
+  resumeUrl: "https://drive.google.com/file/d/1RPBMnwT36hc63Sh-KwkZbzmrPFDVdOWP/view?usp=sharing"
 };
 
 export const aboutData = {
