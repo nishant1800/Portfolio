@@ -15,10 +15,30 @@ export const personalInfo = {
 };
 
 export const aboutData = {
+  badge: "about me",
+  headline: "I like building data-driven systems that feel simple on the surface and powerful underneath.",
+  description: "I specialize in data analytics, exploratory data analysis, machine learning, business intelligence dashboards, and modern full-stack software solutions. Anywhere data meets clean engineering, that's where I deliver value.",
+  secondaryText: "Currently pursuing M.Tech in Machine Learning & Data Science, solving algorithmic problems, and crafting interactive dashboards & applications using Python, SQL, Power BI, React, and Node.js.",
+  careAbout: [
+    "Data-driven decision making & EDA",
+    "Interactive dashboards & KPI reporting",
+    "Machine learning & statistical analysis",
+    "Scalable web architectures & REST APIs",
+    "Clean code & attention to detail"
+  ],
+  badges: [
+    { label: "M.Tech ML & Data Science", type: "primary" },
+    { label: "B.Tech '24", type: "secondary" },
+    { label: "Bengaluru, India", type: "neutral" }
+  ],
+  quote: "Transforming complex datasets into actionable insights & scalable solutions.",
+  coreTools: [
+    "Python", "SQL", "Power BI", "Pandas", "NumPy", "Machine Learning", "Exploratory Data Analysis", "DAX", "React", "Node.js", "Express.js", "MongoDB", "Java", "Git & GitHub", "AWS"
+  ],
   narrative: [
-    "I am a motivated Data Science professional with a passion for analyzing data, finding meaningful insights, and solving real-world problems using data.",
+    "I am a motivated Data Science & Software professional with a passion for analyzing data, finding meaningful insights, and solving real-world problems.",
     "I use Python, SQL, Pandas, NumPy, Matplotlib, Seaborn, and Power BI for data analysis, EDA, visualization, and creating interactive dashboards.",
-    "I thrive on solving intricate algorithmic problems, designing optimized database schemas, and continuously exploring emerging cloud."
+    "I thrive on solving intricate algorithmic problems, designing optimized database schemas, and building full-stack web applications."
   ],
   passions: [
     { title: "Data Analysis & EDA", desc: "Data cleaning, exploratory data analysis, pattern recognition, and statistical validation." },
@@ -252,7 +272,7 @@ export const educationData = [
     id: 2,
     degree: "Bachelors of Technology",
     institution: "Bihar Engineering University, Patna",
-    // department: "Civil Engineering",
+    department: "Civil Engineering",
     period: "2020 – 2024",
     location: "India",
     current: false

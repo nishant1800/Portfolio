@@ -84,21 +84,46 @@ const Contact = () => {
 
           {/* Quick Contact Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 pt-2">
-            {/* Email Card */}
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="p-5 rounded-xl bg-[#172033]/90 border border-[#26344D] hover:border-[#00D084]/60 flex items-center gap-4 group transition-all cursor-pointer"
+            {/* Email Card (Click to Copy, shows Copy on hover) */}
+            <button
+              type="button"
+              onClick={handleCopyEmail}
+              className="w-full text-left p-5 rounded-xl bg-[#172033]/90 border border-[#26344D] hover:border-[#00D084]/60 flex items-center justify-between group transition-all cursor-pointer"
+              title="Click to copy email address"
             >
-              <Mail className="w-6 h-6 text-[#00D084] shrink-0" />
-              <div className="min-w-0">
-                <div className="text-sm sm:text-base font-bold text-white mb-0.5 group-hover:text-[#00D084] transition-colors">
-                  Email
-                </div>
-                <div className="text-xs sm:text-sm text-[#94A3B8] truncate">
-                  {personalInfo.email}
+              <div className="flex items-center gap-4 min-w-0">
+                <Mail className="w-6 h-6 text-[#00D084] shrink-0" />
+                <div className="min-w-0">
+                  <div className="text-sm sm:text-base font-bold text-white mb-0.5 group-hover:text-[#00D084] transition-colors">
+                    Email
+                  </div>
+                  <div className="text-xs sm:text-sm text-[#94A3B8] truncate">
+                    {personalInfo.email}
+                  </div>
                 </div>
               </div>
-            </a>
+
+              {/* Copy indicator: visible only on hover or when copied */}
+              <div
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1D293D] border border-[#26344D] text-xs font-mono transition-all duration-200 shrink-0 ml-3 ${
+                  copiedEmail
+                    ? 'opacity-100 text-[#00D084] border-[#00D084]/50'
+                    : 'opacity-0 group-hover:opacity-100 text-[#94A3B8] group-hover:text-[#00D084] group-hover:border-[#00D084]/40'
+                }`}
+              >
+                {copiedEmail ? (
+                  <>
+                    <CheckCircle className="w-3.5 h-3.5 text-[#00D084]" />
+                    <span>Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3.5 h-3.5" />
+                    <span>Copy</span>
+                  </>
+                )}
+              </div>
+            </button>
 
             {/* Location Card */}
             <a
@@ -205,7 +230,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="Your Email"
+                    placeholder="example@gmail.com"
                     className={`w-full px-4 py-3 rounded-lg bg-[#0F172A] border text-sm text-white placeholder-[#94A3B8]/40 focus:outline-none focus:ring-1 focus:ring-[#00D084] transition-colors ${errors.email ? 'border-red-500/80' : 'border-[#26344D] focus:border-[#00D084]'
                       }`}
                   />
@@ -244,7 +269,7 @@ const Contact = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Your Message"
+                  placeholder="Hey, Nishant I am working on..."
                   className={`w-full px-4 py-3 rounded-lg bg-[#0F172A] border text-sm text-white placeholder-[#94A3B8]/40 focus:outline-none focus:ring-1 focus:ring-[#00D084] transition-colors resize-y ${errors.message ? 'border-red-500/80' : 'border-[#26344D] focus:border-[#00D084]'
                     }`}
                 />

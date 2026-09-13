@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   TrendingUp,
   BarChart3,
@@ -20,14 +20,6 @@ const iconMap = {
 };
 
 const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
-
-  const categories = ['All', ...skillsData.map(s => s.category)];
-
-  const filteredData = activeCategory === 'All'
-    ? skillsData
-    : skillsData.filter(s => s.category === activeCategory);
-
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       {/* Section Divider */}
@@ -35,25 +27,9 @@ const Skills = () => {
         <span>03. SKILLS & EXPERTISE</span>
       </div>
 
-      {/* Category Filter Pills */}
-      <div className="flex flex-wrap items-center gap-2 mb-10 pb-2 overflow-x-auto">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-2 rounded-lg text-xs font-mono transition-all duration-200 ${activeCategory === cat
-                ? 'bg-[#00D084] text-[#0B1220] font-semibold shadow-md shadow-[#00D084]/20'
-                : 'bg-[#172033] border border-[#26344D] text-[#94A3B8] hover:text-white hover:border-[#00D084]/50'
-              }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
-
       {/* Skills Card Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredData.map((categoryGroup, idx) => {
+        {skillsData.map((categoryGroup, idx) => {
           const Icon = iconMap[categoryGroup.iconName] || Layers;
           return (
             <div
