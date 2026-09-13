@@ -4,7 +4,7 @@ This is my personal portfolio website where I showcase my skills, projects, and 
 
 ## 🚀 Live Website
 
-[Visit Portfolio](https://nishanranjan.vercel.app/)
+[Visit Portfolio](https://nishantranjan.vercel.app/)
 
 ## 🛠️ Technologies Used
 
