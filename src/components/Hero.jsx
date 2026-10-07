@@ -33,8 +33,7 @@ const Hero = () => {
         {/* Short Summary Description */}
         <p className="text-base sm:text-lg text-[#94A3B8] max-w-2xl leading-relaxed mb-8">
           Building my skills in data analysis and data science through hands-on projects and continuous learning. Previously at {' '}
-          <span className="text-[#00D084]">Radical Minds</span>,{' '}
-          <span className="text-slate-200">Bluestock</span> and{' '}
+          <span className="text-[#00D084]">Radical Minds</span> &{' '}
           <span className="text-slate-200">Kodnest</span>.
         </p>
 

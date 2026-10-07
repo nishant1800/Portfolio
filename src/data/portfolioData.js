@@ -16,9 +16,9 @@ export const personalInfo = {
 
 export const aboutData = {
   badge: "about me",
-  headline: "I like building data-driven systems that feel simple on the surface and powerful underneath.",
-  description: "I specialize in data analytics, exploratory data analysis, machine learning, business intelligence dashboards, and modern full-stack software solutions. Anywhere data meets clean engineering, that's where I deliver value.",
-  secondaryText: "Currently pursuing M.Tech in Machine Learning & Data Science, solving algorithmic problems, and crafting interactive dashboards & applications using Python, SQL, Power BI, React, and Node.js.",
+  headline: "I like building simple systems that use data to solve real-world problems.",
+  description: "I work with data analytics, machine learning, dashboards, and full-stack development to build useful solutions.",
+  secondaryText: "Currently pursuing an M.Tech in Machine Learning & Data Science, with a focus on data analysis, machine learning, dashboards, and full-stack development.",
   careAbout: [
     "Data-driven decision making & EDA",
     "Interactive dashboards & KPI reporting",
